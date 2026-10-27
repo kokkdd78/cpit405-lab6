@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 6 | Like or Dislike</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <p class="eyebrow">CPIT-405 · JavaScript</p>
+    <h1>Lab 6</h1>
+    <p class="subtitle">Like or Dislike</p>
+
+    <section class="panel" aria-labelledby="vote-heading">
+      <h2 id="vote-heading">Cast your vote</h2>
+      <p class="hint">Choose one option. Your browser can vote once until you reset.</p>
+      <div class="vote-actions">
+        <button id="like-button" class="vote-button" type="button" aria-label="Like">
+          <span class="emoji" aria-hidden="true">👍</span>
+          <span>Like</span>
+          <strong id="like-count">0</strong>
+        </button>
+        <button id="dislike-button" class="vote-button" type="button" aria-label="Dislike">
+          <span class="emoji" aria-hidden="true">👎</span>
+          <span>Dislike</span>
+          <strong id="dislike-count">0</strong>
+        </button>
+      </div>
+      <p id="vote-status" class="state-message" aria-live="polite"></p>
+    </section>
+
+    <section class="panel" aria-labelledby="comments-heading">
+      <h2 id="comments-heading">Comments</h2>
+      <form id="comment-form">
+        <label for="comment-input">Leave a comment</label>
+        <textarea id="comment-input" name="comment" maxlength="280" rows="4" placeholder="Write a comment..." required></textarea>
+        <div class="form-actions">
+          <button id="submit-button" class="primary-button" type="submit">Submit comment</button>
+          <button id="reset-button" class="reset-button" type="button">Reset all</button>
+        </div>
+      </form>
+      <p id="feedback" class="state-message" role="status" aria-live="polite"></p>
+      <h3>Submitted comments</h3>
+      <ul id="comments-list" class="comments-list" aria-live="polite"></ul>
+    </section>
+
+    <p class="footnote">Votes and comments are saved in this browser using cookies, not shared across visitors.</p>
+  </main>
+</body>
+</html>

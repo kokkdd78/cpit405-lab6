@@ -1,0 +1,112 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #16233b;
+  background: #f4f6fb;
+  line-height: 1.5;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; }
+
+.container {
+  max-width: 740px;
+  margin: 46px auto;
+  padding: 0 18px 32px;
+}
+
+.eyebrow {
+  color: #536580;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 4px;
+}
+
+h1 { margin: 0; text-align: center; font-size: 2.8rem; }
+.subtitle { text-align: center; margin: 2px 0 30px; color: #596a81; font-size: 1.2rem; }
+
+.panel {
+  background: white;
+  border: 1px solid #e1e6ef;
+  border-radius: 14px;
+  padding: 27px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 24px rgba(35, 47, 78, 0.05);
+}
+
+h2 { margin: 0 0 4px; font-size: 1.35rem; }
+h3 { margin: 22px 0 10px; font-size: 1rem; }
+.hint { color: #68758a; font-size: 0.9rem; margin: 0 0 22px; }
+
+.vote-actions { display: flex; gap: 14px; }
+.vote-button {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid #e1e6ef;
+  background: #fcfdff;
+  color: #16233b;
+  padding: 17px 10px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.vote-button strong { font-size: 1.6rem; font-variant-numeric: tabular-nums; }
+.vote-button .emoji { font-size: 1.55rem; }
+.vote-button:not(:disabled):hover { border-color: #406ee8; background: #f4f7ff; }
+.vote-button.selected { border-color: #406ee8; background: #eaf0ff; }
+.vote-button:disabled:not(.selected) { opacity: 0.53; cursor: not-allowed; }
+.vote-button:disabled.selected { cursor: default; }
+
+label { display: block; margin: 17px 0 7px; font-weight: bold; font-size: 0.93rem; }
+textarea {
+  display: block;
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #cbd4e2;
+  border-radius: 9px;
+  font: inherit;
+  resize: vertical;
+  min-height: 105px;
+}
+textarea:focus, button:focus-visible { outline: 3px solid #9ab8ff; outline-offset: 2px; }
+textarea:disabled { background: #f3f5f8; color: #6b7280; }
+.form-actions { display: flex; gap: 11px; margin-top: 14px; }
+.primary-button, .reset-button {
+  padding: 11px 19px;
+  border-radius: 9px;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+.primary-button { color: #fff; background: #315fd4; border: 1px solid #315fd4; }
+.primary-button:hover:not(:disabled) { background: #254db5; }
+.primary-button:disabled { opacity: 0.55; cursor: not-allowed; }
+.reset-button { color: #34435e; background: #fff; border: 1px solid #bcc7d8; }
+.reset-button:hover { background: #f6f8fc; }
+.state-message { color: #48617e; font-size: 0.91rem; min-height: 1.25em; margin: 12px 0 0; }
+.comments-list { list-style: none; margin: 0; padding: 0; }
+.comments-list li {
+  padding: 13px 15px;
+  border: 1px solid #e1e6ef;
+  border-radius: 9px;
+  background: #fafbfe;
+  margin: 7px 0;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+.comments-list .empty { color: #718096; font-style: italic; }
+.footnote { color: #6b7990; text-align: center; font-size: 0.83rem; }
+
+@media (max-width: 520px) {
+  .container { margin-top: 25px; }
+  .panel { padding: 18px; }
+  .vote-actions { flex-direction: column; }
+  .form-actions { flex-wrap: wrap; }
+  .primary-button, .reset-button { flex: 1; }
+}
